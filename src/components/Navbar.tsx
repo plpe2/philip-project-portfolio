@@ -1,8 +1,6 @@
-import React from "react";
 import { Button, Stack, TextField, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
-import Dashboard from "./Dashboard";
 
 function Navbar() {
   return (
@@ -17,8 +15,9 @@ function Navbar() {
           spacing={1}
           sx={{ justifyContent: "center", alignItems: "center" }}
         >
-          <Link to="/" className="link-title">Abstract</Link>
-          <Link to="/help-center" className="link-title">Help Center</Link>
+          <Link to="/" className="link-logo">Abstract</Link>
+          <Typography variant="body1" color="white">|</Typography>
+          <Link to="/" className="link-title">Help Center</Link>
         </Stack>
         <Stack flexGrow={1} />
         <Stack direction="row" spacing={2}>
