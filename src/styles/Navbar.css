@@ -1,0 +1,23 @@
+*{
+    font-family :sans-serif;
+}
+.parent-div{
+    background-color: #000000;
+    padding: 10px;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-title{
+    color: white;
+    font-family: 'GT America Standard';
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.link-title:hover{
+    text-decoration: underline;
+    transition: all 0.5s ease-out;
+}
