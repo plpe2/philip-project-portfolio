@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Stack, TextField, Typography } from "@mui/material";
+import { dashContents } from "./dashContents";
 
 function Dashboard() {
   const [searchVal, setSearchVal] = useState<string>("");
   return (
+    <>
     <Stack
       direction="column"
       spacing={2}
@@ -34,6 +36,18 @@ function Dashboard() {
         }}
       />
     </Stack>
+
+    <Stack direction='row' spacing={2} sx={{backgroundColor: 'red', justifyContent: 'center', flexWrap: 'wrap', alignContent: 'center'}}>
+        {dashContents.map((contents, index) =>{
+          return (
+            <Stack key={index} direction='column' spacing={2} sx={{backgroundColor: 'blue', flexWrap: 'wrap', width: '30%', justifyContent: 'center'}}>
+              <Typography variant="body1" color="initial">{contents.header}</Typography>
+              <Typography variant="body1" color="initial">{contents.content}</Typography>
+            </Stack>
+          )
+        })}
+    </Stack>
+    </>
   );
 }
 

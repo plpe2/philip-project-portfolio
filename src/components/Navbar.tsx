@@ -22,8 +22,13 @@ function Navbar() {
         <Stack flexGrow={1} />
         <Stack direction="row" spacing={2}>
           <TextField
-            id=""
+            id="search-bar"
             placeholder="Search"
+            onBlur={(e) => {
+              const target = e.target as HTMLInputElement;
+              target.style.display = 'none';
+              console.log(target.value);
+            }}
             sx={{
               "& .MuiInputBase-root": {
                 backgroundColor: "white",
